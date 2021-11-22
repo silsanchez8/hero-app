@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import * as S from './NavBar.styles';
 
 export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
       <Link className="navbar-brand" to="/">
-        Asociaciones
+        SuperHeroes
       </Link>
 
       <div className="navbar-collapse">
@@ -30,7 +31,7 @@ export const Navbar = () => {
         </div>
       </div>
 
-      <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <S.MenuRight className="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul className="navbar-nav ml-auto">
           <NavLink
             activeClassName="active"
@@ -41,7 +42,7 @@ export const Navbar = () => {
             Logout
           </NavLink>
         </ul>
-      </div>
+      </S.MenuRight>
     </nav>
   );
 };
